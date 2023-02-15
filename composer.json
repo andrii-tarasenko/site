@@ -1,0 +1,28 @@
+{
+  "name": "tarasenko/test",
+  "description": "A page with header, body, and footer templates",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tarasenko/Andrii",
+      "email": "tarasenk.andrey@gmail.com"
+    }
+  ],
+  "require": {
+    "smarty/smarty": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Test\\": "src/"
+    },
+    "classmap": [
+      "src/",
+      "src/Entity/Main.php"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist",
+    "prepend-autoloader": false
+  }
+}

@@ -1,0 +1,29 @@
+version: '3'
+services:
+    nginx:
+        image: nginx
+        volumes:
+            - /home/bezgmo/www/test.bezgmo.tot/site/nginx/nginx.conf:/etc/nginx/nginx.conf
+            - /home/bezgmo/www/test.bezgmo.tot/site:/var/www/html
+        ports:
+            - "80:80"
+        depends_on:
+            - php
+    php:
+        image: php:7.4-fpm
+        volumes:
+            - /home/bezgmo/www/test.bezgmo.tot/site:/var/www/html
+        depends_on:
+            - db
+    db:
+        image: mysql:5.7
+        container_name: mysql_db
+        command: mysqld --explicit_defaults_for_timestamp=1
+        restart: always
+        environment:
+            MYSQL_DATABASE: my_database
+            MYSQL_USER: my_user
+            MYSQL_PASSWORD: my_password
+            MYSQL_ROOT_PASSWORD: my_root_password
+        volumes:
+            - /home/bezgmo/www/test.bezgmo.tot/site/mysql:/var/lib/mysql
