@@ -1,12 +1,12 @@
-<div class="alert alert-success" style="display:none;">{$successMessage}</div>
-<div class="alert alert-danger" style="display:none;">{$errorMessage}</div>
+<div class="alert alert-danger" style="display:none;"></div>
+<div class="alert alert-success" style="display:none;"></div>
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <h3 class="text-center mb-4">Реєстрація</h3>
-            <form id="registration-form">
                 <div class="form-group">
-                    <label for="surname">Фамілія</label>
+                    <label for="surname">Прівище</label>
                     <input type="text" class="form-control" id="surname" name="surname">
                 </div>
                 <div class="form-group">
@@ -21,7 +21,6 @@
                     <label for="password-confirm">Підтвердіть пароль</label>
                     <input type="password" class="form-control" id="password-confirm" name="password-confirm">
                 </div>
-                <button type="submit" class="btn btn-primary">Зареєструватися</button>
-            </form>
+                <button id="submit_b" type="submit" class="btn btn-primary">Зареєструватися</button>
         </div>
     </div>
